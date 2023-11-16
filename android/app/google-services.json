@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "387936145022",
+    "project_id": "poc-mvvm-riverpod",
+    "storage_bucket": "poc-mvvm-riverpod.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387936145022:android:3391141331c0522e9e522f",
+        "android_client_info": {
+          "package_name": "com.example.poc_mvvm_riverpod_architecture"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZgZdW_j7XVu0oWPZ2YZLxsvgH4_bLoak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
