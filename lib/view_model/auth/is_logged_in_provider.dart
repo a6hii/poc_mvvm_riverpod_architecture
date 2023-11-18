@@ -1,6 +1,6 @@
+import 'package:poc_mvvm_riverpod_architecture/type_def/auth_result.dart';
+import 'package:poc_mvvm_riverpod_architecture/view_model/auth/auth_state_provider.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:testingriverpod/state/auth/models/auth_result.dart';
-import 'package:testingriverpod/state/auth/providers/auth_state_provider.dart';
 
 part 'is_logged_in_provider.g.dart';
 

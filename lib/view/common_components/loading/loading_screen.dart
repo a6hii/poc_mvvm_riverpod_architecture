@@ -56,7 +56,7 @@ class LoadingScreen {
                 minWidth: size.width * 0.5,
               ),
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: Theme.of(context).scaffoldBackgroundColor,
                 borderRadius: BorderRadius.circular(10.0),
               ),
               child: Padding(
@@ -79,7 +79,7 @@ class LoadingScreen {
                               style: Theme.of(context)
                                   .textTheme
                                   .bodyMedium
-                                  ?.copyWith(color: Colors.black),
+                                  ?.copyWith(color: Colors.white),
                             );
                           } else {
                             return Container();

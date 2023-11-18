@@ -12,7 +12,20 @@
           "package_name": "com.example.poc_mvvm_riverpod_architecture"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "387936145022-o5vusrg1la2174dg19jp35ca91ttt3d8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.poc_mvvm_riverpod_architecture",
+            "certificate_hash": "5c82078cc73e9ce3f7314df5e9a2a1cfd87b54ca"
+          }
+        },
+        {
+          "client_id": "387936145022-ed3tebu9esqdeikfovsqftd6b7k5i6dq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDZgZdW_j7XVu0oWPZ2YZLxsvgH4_bLoak"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "387936145022-ed3tebu9esqdeikfovsqftd6b7k5i6dq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "387936145022-44cudbbp0vqskfeema82ptmuq7eaein9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.pocMvvmRiverpodArchitecture"
+              }
+            }
+          ]
         }
       }
     }
