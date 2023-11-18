@@ -44,8 +44,6 @@ class AuthStateNotifier extends StateNotifier<AuthState> {
     );
   }
 
-  
-
   Future<void> saveUserInfo({
     required UserId userId,
   }) =>

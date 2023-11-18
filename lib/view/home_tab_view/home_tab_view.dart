@@ -9,6 +9,7 @@ import 'package:poc_mvvm_riverpod_architecture/view/home_tab_view/todos_list.dar
 import 'package:poc_mvvm_riverpod_architecture/view_model/alert_dialog_model.dart';
 import 'package:poc_mvvm_riverpod_architecture/view_model/auth/auth_state_provider.dart';
 import 'package:poc_mvvm_riverpod_architecture/view_model/todo/todo_view_model.dart';
+import 'package:poc_mvvm_riverpod_architecture/view_model/user_info/user_id_provider.dart';
 
 class HomeTabView extends ConsumerWidget {
   const HomeTabView({super.key});
@@ -16,8 +17,8 @@ class HomeTabView extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Consumer(builder: (context, ref, _) {
-      final todoViewModel = ref.watch(getTodoFutureProvider);
-
+      final todoViewModel =
+          ref.watch(getTodoFutureProvider(ref.watch(userIdProvider) ?? ''));
       return Scaffold(
         appBar: AppBar(
           title: const Text(
@@ -31,6 +32,8 @@ class HomeTabView extends ConsumerWidget {
                           (value) => value ?? false,
                         );
                 if (shouldLogOut) {
+                  ref.invalidate(getTodoProvider);
+                  ref.invalidate(getTodoFutureProvider);
                   await ref.read(authStateProvider.notifier).logOut();
                 }
               },

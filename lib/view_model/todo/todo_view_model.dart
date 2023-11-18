@@ -5,7 +5,7 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 import 'package:poc_mvvm_riverpod_architecture/model/todo/todo.dart';
 import 'package:poc_mvvm_riverpod_architecture/model/todo/todo_list_model.dart';
-import 'package:poc_mvvm_riverpod_architecture/view_model/user_info/user_id_provider.dart';
+import 'package:poc_mvvm_riverpod_architecture/type_def/userid.dart';
 
 class GetTodo {
   Ref ref;
@@ -14,9 +14,8 @@ class GetTodo {
   );
   final _storage = const FlutterSecureStorage();
 
-  Future<TodoListModel> getTodoText() async {
+  Future<TodoListModel> getTodoText(String userId) async {
     try {
-      final userId = ref.read(userIdProvider);
       final String? serializedTodoList =
           await _storage.read(key: 'todo_list_$userId');
 
@@ -34,6 +33,7 @@ class GetTodo {
 }
 
 final getTodoProvider = Provider((ref) => GetTodo(ref));
-final getTodoFutureProvider = FutureProvider<TodoListModel>((ref) {
-  return ref.watch(getTodoProvider).getTodoText();
+final getTodoFutureProvider =
+    FutureProvider.family<TodoListModel, UserId>((ref, arg) {
+  return ref.read(getTodoProvider).getTodoText(arg);
 });
